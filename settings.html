@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile & Settings</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar or other content -->
+
+    <main class="content">
+      <h1>Profile & Settings</h1>
+      
+      <!-- Edit Profile Form -->
+      <div class="edit-profile-form">
+        <h2>Edit Profile</h2>
+        <form>
+          <section>
+            <h3>Profile Picture</h3>
+            <div class="profile-picture-upload">
+              <img class="profile-preview" src="sourav.png" alt="Profile Picture">
+              <button class="upload-btn">Upload</button>
+            </div>
+          </section>
+          <section>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name">
+          </section>
+          <section>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email">
+          </section>
+          <button class="save-profile-btn" type="submit">Save Profile</button>
+          
+        </form>
+      </div>
+      
+      <!-- Settings Form -->
+      <div class="settings-form">
+        <h2>Settings</h2>
+        <form>
+          <section>
+            <h3>General Settings</h3>
+            <label for="notifications">Notifications</label>
+            <input type="checkbox" id="notifications" checked>
+<button class="notification-toggle-btn">Toggle Notifications</button>
+<p class="notification-status">Notifications are disabled.</p>
+
+            <label for="language">Language</label>
+            <select id="language">
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+              <!-- Add other language options -->
+            </select>
+          </section>
+          <button class="save-settings-btn" type="submit">Save Settings</button>
+
+
+        </form>
+      </div>
+
+
+      <button class="theme-toggle-btn">Switch Theme</button>
+    </main>
+  </div>
+
+  <script src="settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="sourav.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="sourav.png" alt="Profile Picture of sourav nandu" class="profile-picture">
+        <p class="profile-subtitle">sourav nandu</p>
+      </div>
+      <nav class="menu">
+        <h3>Today’s Tasks</h3>
+        <ul>
+          <li><span class="dot personal"></span> Personal</li>
+          <li><span class="dot freelance"></span> Freelance</li>
+          <li><span class="dot work"></span> Work</li>
+          <li>Scheduled Tasks</li>
+        </ul>
+        <ul>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <h1>Today’s Main Focus</h1>
+      <h2>Design Team Meeting</h2>
+      <div class="task-input">
+        <input type="text" placeholder="What is your next task?" aria-label="Next Task">
+        <select id="task-category">
+          <option value="personal">Personal</option>
+          <option value="freelance">Freelance</option>
+          <option value="work">Work</option>
+          <option value="scheduled">Scheduled</option>
+        </select>
+        <button class="add-task-btn">+</button>
+      </div>
+    </main>
+  </div>
+  <script src="sourav.js"></script>
+</body>
+</html>

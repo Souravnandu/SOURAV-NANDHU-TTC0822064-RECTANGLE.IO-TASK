@@ -1,0 +1,254 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar (optional) */
+.sidebar {
+  width: 25%;
+  background-color: #1a1a2e;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-bottom: 10px;
+}
+
+.profile-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.profile-subtitle {
+  font-size: 1em;
+  color: #ccc;
+}
+
+/* Main Content */
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.content h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #0f3460;
+}
+
+.content h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form Styling */
+.edit-profile-form, .settings-form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+.edit-profile-form h2, .settings-form h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #0f3460;
+}
+
+.edit-profile-form section, .settings-form section {
+  margin-bottom: 20px;
+}
+
+.edit-profile-form h3, .settings-form h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.profile-picture-upload {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.upload-btn {
+  padding: 10px 15px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #1a1a2e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  background-color: #0f3460;
+}
+
+form input[type="text"], form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.save-profile-btn, .save-settings-btn {
+  padding: 10px 15px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #1a1a2e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-profile-btn:hover, .save-settings-btn:hover {
+  background-color: #0f3460;
+}
+
+/* Define Light and Dark Themes using CSS Variables */
+
+/* Light Theme */
+:root {
+  --form-bg: #f9f9f9;
+  --form-border: #ccc;
+  --form-text-color: #333;
+  --form-header-color: #0f3460;
+  --button-bg: #1a1a2e;
+  --button-hover-bg: #0f3460;
+  --button-text-color: #fff;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --form-bg: #333;
+  --form-border: #555;
+  --form-text-color: #fff;
+  --form-header-color: #fff;
+  --button-bg: #007bff;
+  --button-hover-bg: #0056b3;
+  --button-text-color: #fff;
+}
+
+/* Apply the variables to the relevant properties */
+.edit-profile-form, .settings-form {
+  background-color: var(--form-bg);
+  border: 1px solid var(--form-border);
+}
+
+.edit-profile-form h2, .settings-form h2 {
+  color: var(--form-header-color);
+}
+
+.edit-profile-form section, .settings-form section {
+  margin-bottom: 20px;
+}
+
+.edit-profile-form h3, .settings-form h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: var(--form-header-color);
+}
+
+.profile-picture-upload {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--form-border);
+}
+
+.upload-btn {
+  padding: 10px 15px;
+  font-size: 1em;
+  color: var(--button-text-color);
+  background-color: var(--button-bg);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  background-color: var(--button-hover-bg);
+}
+
+form input[type="text"], form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid var(--form-border);
+  border-radius: 5px;
+  color: var(--form-text-color);
+  background-color: var(--form-bg);
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: var(--form-text-color);
+}
+
+.save-profile-btn, .save-settings-btn {
+  padding: 10px 15px;
+  font-size: 1em;
+  color: var(--button-text-color);
+  background-color: var(--button-bg);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-profile-btn:hover, .save-settings-btn:hover {
+  background-color: var(--button-hover-bg);
+}
